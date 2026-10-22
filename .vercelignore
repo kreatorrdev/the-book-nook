@@ -1,0 +1,16 @@
+.git/
+.agents/
+.github/
+.vercel/
+.next/
+.data/
+node_modules/
+.env
+.env.*
+docs/
+tests/
+test-results/
+*.log
+*.tsbuildinfo
+AGENTS.md
+skills-lock.json

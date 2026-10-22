@@ -1,0 +1,1 @@
+export default function Loading() { return <main className="loading-page" aria-live="polite"><span className="eyebrow">THE BOOK NOOK</span><h1>Opening a new chapter…</h1><div className="loading-line" /></main>; }

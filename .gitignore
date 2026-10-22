@@ -1,0 +1,16 @@
+node_modules/
+.agents/
+skills-lock.json
+.next/
+.data/
+.env
+.env.*
+!.env.example
+.vercel/
+*.tsbuildinfo
+test-results/
+*.log
+
+.vercel
+.env*
+!.env.example

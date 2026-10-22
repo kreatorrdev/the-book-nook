@@ -1,0 +1,157 @@
+@import "@fontsource/fraunces/latin-500.css";
+@import "@fontsource/fraunces/latin-500-italic.css";
+@import "@fontsource/fraunces/latin-600.css";
+@import "@fontsource/manrope/latin-400.css";
+@import "@fontsource/manrope/latin-500.css";
+@import "@fontsource/manrope/latin-600.css";
+@import "@fontsource/manrope/latin-700.css";
+
+/* Softer editorial type and tactile controls, in the library's brass palette. */
+:root{--serif:'Fraunces',Georgia,serif;--sans:'Manrope',Arial,sans-serif;--radius:14px;--panel-radius:24px}
+h1,h2,h3{font-weight:500;letter-spacing:-.035em}
+body{font-weight:400}
+.eyebrow{font-weight:700;letter-spacing:1.8px}
+.brand{font-family:var(--serif);font-weight:500;font-size:26px;letter-spacing:-1px}
+.brand-caption{font-family:var(--sans);font-weight:600;letter-spacing:2px}
+.desktop-nav{gap:12px}
+.desktop-nav a{display:flex;align-items:center;min-height:42px;padding:10px 15px;font-size:11px;font-weight:600;border-radius:999px;transition:background .2s,color .2s}
+.desktop-nav a.active,.desktop-nav a:hover{background:#d0ad7317;color:#ebcc95}
+.desktop-nav a.active:after{display:none}
+.header-signin{border:1px solid #d0ad7373;border-radius:999px;padding:9px 17px;min-height:42px;gap:12px;font-weight:700;background:#d0ad7309;transition:background .2s}
+.header-signin:hover{background:#d0ad731f}
+.reader-button{border-radius:999px;border:1px solid #ac945337;padding:4px 10px 4px 5px}
+.icon-button{border-radius:50%}
+.button{border-radius:999px;font-weight:700;font-size:11px;letter-spacing:0;min-height:49px;padding:11px 23px;gap:14px;transition:transform .18s,background .18s,box-shadow .18s,border-color .18s}
+.button.primary{background:#d5b47a;border:2px solid #201b13;color:#17170f;box-shadow:0 3px 0 #080b08,0 0 0 1px #dfc28b;min-height:49px}
+.button.primary:hover{background:#e4c58e;transform:translateY(-2px);box-shadow:0 5px 0 #080b08,0 0 0 1px #e8ce9e}
+.button.primary:active{transform:translateY(1px);box-shadow:0 1px 0 #080b08,0 0 0 1px #dfc28b}
+.button.primary>svg:last-child{background:#1a1b13;color:#e6ca93;width:27px;height:27px;padding:6px;border-radius:50%;flex-shrink:0;stroke-width:2}
+.button.secondary{border:1.5px solid #bda3748f;background:#1b1d16a3;box-shadow:0 2px 0 #070b083d}
+.button.secondary:hover{background:#5a4d2d40;transform:translateY(-1px)}
+.button.danger{border-radius:999px}
+.favorite-button{border-radius:50%;width:51px;min-width:51px;padding:12px!important;box-shadow:none}
+.save-book,.library-favorite{border:1.5px solid #d8b77996;box-shadow:0 2px 0 #080b0873}
+.dropdown{border-radius:18px;padding:8px;box-shadow:0 15px 40px #0008}
+.dropdown a,.dropdown button{border-radius:11px;font-weight:500}
+.mobile-nav{border-radius:0 0 22px 22px;box-shadow:0 10px 20px #0002}
+.mobile-nav a{border-radius:10px;border-bottom-color:transparent}
+.mobile-nav a:hover{background:#d0ad7314}
+
+.cathedral-hero{border-radius:0 0 28px 28px}
+.cathedral-copy{max-width:780px}
+.cathedral-copy>.eyebrow{display:inline-flex;padding:8px 13px;border:1px solid #c1a77555;border-radius:999px;background:#0d140fb0;letter-spacing:1.5px;font-size:8px;backdrop-filter:blur(8px)}
+.cathedral-copy>.eyebrow .gold-rule{width:18px}
+.cathedral-copy h1{font-size:clamp(62px,5.5vw,82px);line-height:1.15;letter-spacing:-3.5px;margin:25px 0 26px;font-weight:500}
+.cathedral-copy h1 em{display:inline-block;color:#1b1a11;background:#d5b77e;padding:.015em .15em .065em;border-radius:.18em;transform:rotate(-2deg);box-shadow:0 5px 0 #060a0873;text-shadow:none;line-height:1.04;margin-top:7px}
+.cathedral-copy>p{font-size:13px;line-height:1.95}
+.cathedral-actions{gap:26px;margin-top:32px}
+.cathedral-actions .button{padding:10px 12px 10px 24px;gap:26px;min-height:54px;font-size:11px}
+.cathedral-actions .button>svg:last-child{width:32px;height:32px;padding:8px}
+.hero-shelf-link{font-weight:600;border:0;border-radius:999px;padding:9px 14px;gap:10px;transition:background .2s}
+.hero-shelf-link:hover{background:#11170e8c}
+.hero-colophon p{font-size:16px;letter-spacing:-.4px}
+.hero-colophon>a{border-radius:50%;background:#151c13a3}
+.reading-seal{position:absolute;right:7px;bottom:130px;width:116px;aspect-ratio:1;border-radius:50%;background:#d6bd88;color:#181c13;transform:rotate(9deg);box-shadow:0 0 0 5px #e7d4aa30,5px 7px 0 #080e0c6b;border:1px solid #1a2116;display:grid;place-items:center;pointer-events:none}
+.reading-seal>svg{position:absolute;inset:0;width:100%;height:100%;padding:1px;fill:currentColor;font:700 7.8px var(--sans);letter-spacing:.8px}
+.reading-seal>span{text-align:center;font:600 21px/.93 var(--serif);letter-spacing:-1px;transform:rotate(-9deg);padding-top:4px}
+.reading-seal>span>span{display:block;font:600 7px var(--sans);letter-spacing:.4px;margin-bottom:5px}
+.reading-seal>span>em{font-weight:500;font-size:18px}
+.reading-seal>i{position:absolute;bottom:20px;font-style:normal;font-size:9px}
+.inscription-strip{border-top:1px solid var(--line);margin-top:10px;background:transparent;letter-spacing:1.3px;font-weight:600}
+.section-heading h2{font-size:39px;line-height:1.13}
+.section-heading .eyebrow{font-size:8px;letter-spacing:1.6px}
+.section-heading>.text-link{font-weight:700;gap:12px}
+.section-heading>.text-link>svg{border:1px solid #b99d6666;border-radius:50%;width:28px;height:28px;padding:6px;flex-shrink:0}
+.curated-gallery{border-radius:var(--panel-radius);overflow:hidden}
+.curated-copy h2{font-size:44px;line-height:1.12;letter-spacing:-1.7px}
+.curated-intro>p{font-size:26px;line-height:1.3;letter-spacing:-.8px}
+.curated-book h3{font-size:17px;line-height:1.25;letter-spacing:-.45px}
+.curated-book>p{font-size:9px}
+.gothic-mood-card{border-radius:20px;box-shadow:0 5px 0 #060b0833}
+.mood-numeral{width:29px;height:29px;border-radius:50%;border:1px solid #cfb67a59;background:#18201673;display:grid;place-items:center;font:500 12px var(--serif);letter-spacing:-.3px}
+.gothic-mood-card h3{font-size:24px;letter-spacing:-.9px}
+.gothic-mood-card p{font-size:9px;font-weight:500}
+.gothic-mood-card>div>svg{border:1px solid #b99d665e;border-radius:50%;width:27px;height:27px;padding:6px;margin-top:13px}
+.book-card h3{font-size:22px;line-height:1.23;letter-spacing:-.7px}
+.book-genre{font-weight:700;letter-spacing:1px}
+.book-author{font-weight:400}
+.cover-wrap>a,.library-cover>a{border-radius:5px;overflow:hidden}
+.cover-wrap>a:after,.library-cover>a:after{border-radius:inherit}
+.gothic-journal-invite{border-radius:var(--panel-radius)}
+.gothic-journal-copy h2{font-size:47px;line-height:1.14;letter-spacing:-1.9px}
+.gothic-journal-copy .button{font-size:10px}
+.gothic-closing>p{font-size:23px;letter-spacing:-.7px;width:480px;margin-left:-130px}
+.gothic-closing>small{font-weight:600}
+
+.page-intro{border-radius:var(--panel-radius)}
+.page-intro h1{font-size:49px;line-height:1.14;letter-spacing:-2px}
+.catalog-search{border-radius:999px;padding:8px 9px 8px 22px;box-shadow:0 4px 0 #080b0833}
+.catalog-search .button{padding:7px 10px 7px 21px;min-height:46px;gap:17px}
+.catalog-toolbar select{border-radius:999px;padding-inline:17px 30px}
+input:not([type=checkbox]),select,textarea{border-radius:12px}
+textarea{border-radius:15px}
+.filter-chips button,.mood-tags a,.status-label,.private-label{border-radius:999px}
+.filter-chips button{padding:7px 13px;font-weight:600}
+.status-label{padding:4px 9px}
+.private-label{padding:5px 10px;font-weight:600}
+.catalog-grid .book-card h3{font-size:23px}
+.catalog-grid .book-genre{font-size:8px}
+.catalog-end{font-size:15px}
+.continue-card{border-radius:20px;padding:23px}
+.continue-card h3{font-size:25px;line-height:1.2}
+.reading-desk{border-radius:24px;overflow:hidden}
+.reading-desk>.desk-scene{border-radius:22px 22px 0 0}
+.journey-v2 .journey-stage{border-radius:0}
+.desk-controls{padding:11px 18px;gap:12px}
+.desk-controls>div{gap:8px}
+.desk-controls>div>button{border:1px solid #bda37557;border-radius:999px;background:#34352770;padding:8px 13px;min-height:39px;font-size:9px;font-weight:600}
+.desk-controls>div>button:last-child{border-radius:50%;min-width:39px;padding:10px}
+.desk-controls>div>button:hover{background:#6d603733}
+.journey-skip{border-radius:999px;font-weight:600;padding:9px 16px}
+.detail-intro h1{font-size:55px;line-height:1.14;letter-spacing:-2px}
+.detail-author{font-size:21px}
+.rating-line{font-weight:500}
+.detail-description{font-weight:400}
+.aside-note,.spoiler-warning,.soft-note,.unavailable-book{border-radius:16px}
+.about-book h2,.reviews-section h2{font-size:30px;line-height:1.2;letter-spacing:-1px}
+.review-empty h3{font-size:23px;line-height:1.25}
+.aside-note h3{font-size:22px;line-height:1.2}
+.library-card h3{font-size:23px;line-height:1.25;letter-spacing:-.7px}
+.library-tabs{gap:10px;padding-bottom:10px}
+.library-tabs button{border:1px solid transparent;border-radius:999px;min-height:41px;padding:9px 13px;font-size:10px;font-weight:600}
+.library-tabs button.active{border:1px solid #baa36e70;background:#d0ad7317;color:#e1c48d}
+.library-tabs button span{border-radius:999px;padding:1px 6px}
+.view-toggle{border-radius:999px;padding:4px}.view-toggle button,.view-toggle button.active{border-radius:50%}
+.bookshelf-view{border-radius:22px;overflow:hidden}
+.privacy-footnote{font-weight:500}
+.empty-state{border-radius:24px}.empty-state h2{font-size:32px;line-height:1.2;letter-spacing:-1.3px}
+.modal{border-radius:24px;padding:28px 30px 30px}.modal-heading h2{font-size:29px;line-height:1.15;letter-spacing:-1px}
+.modal-book h3{font-size:23px;line-height:1.15;letter-spacing:-.8px}
+.form-stack label,.checkbox-label{font-weight:500}
+.form-stack .checkbox-label{font-weight:500}
+.toast{border-radius:18px}.save-indicator{border-radius:999px}
+.journal-preview{border-radius:16px}.journal-preview h2{font-size:30px;line-height:1.2}
+.journal-paper{border-radius:20px;overflow:hidden}
+.journal-title{font-size:37px!important;letter-spacing:-1.3px}
+.journal-body{font-size:19px!important;line-height:1.95!important}
+.entry-book-label select{border-radius:999px}
+.account-story{border-radius:24px}.account-story h1{font-size:45px;line-height:1.16;letter-spacing:-2px}
+.account-form-panel>h2{font-size:34px;line-height:1.15;letter-spacing:-1.2px}
+.settings-layout>nav a,.settings-layout>nav a.active{border-radius:999px}
+.settings-section h2{font-size:29px;line-height:1.2;letter-spacing:-1px}
+.admin-summary>span,.admin-review,.admin-report,.admin-collections article,.collection-checks{border-radius:17px}
+.footer-top .brand{font-size:24px}.footer-top>p{font-size:15px}.footer-flourish{font-size:12px}
+
+@media(max-width:1100px){.brand{font-size:23px}.desktop-nav{gap:5px}.desktop-nav a{padding:10px 11px;font-size:10px}.header-signin{padding-inline:13px;font-size:10px}.cathedral-copy h1{font-size:73px}.reading-seal{width:102px;right:4px;bottom:130px}.reading-seal>span{font-size:19px}.reading-seal>span>em{font-size:17px}.reading-seal>i{bottom:17px}.curated-copy h2{font-size:37px}.curated-intro>p{font-size:23px}.home-book-grid .book-card h3{font-size:24px}.section-heading h2{font-size:35px}.curated-book h3{font-size:17px}}
+@media(max-width:800px){.header-inner{gap:12px}.brand{font-size:21px;gap:9px}.brand-caption{font-size:5.5px;letter-spacing:1.6px}.desktop-nav a{font-size:9px;padding:10px 9px}.header-signin{padding-inline:11px}.cathedral-copy h1{font-size:66px}.cathedral-copy{max-width:650px}.reading-seal{bottom:118px}.gothic-mood-card h3{font-size:21px;letter-spacing:-1px}.gothic-mood-card{padding-inline:14px}.gothic-mood-card p{font-size:8px}.section-heading h2{font-size:34px}.curated-copy h2{font-size:34px}.curated-intro>p{font-size:22px}.gothic-closing>p{font-size:22px}.page-intro h1{font-size:44px}.detail-intro h1{font-size:49px}}
+@media(max-width:700px){
+  .brand{font-size:22px;letter-spacing:-.9px}.brand-caption{font-size:5.2px;letter-spacing:1.5px}.header-signin{font-size:9px;min-height:37px;padding:8px 11px;gap:5px;margin-right:3px}.header-inner{width:calc(100% - 30px)}.reader-button{padding:4px 7px 4px 4px}.mobile-toggle{border-radius:50%}
+  .button{font-size:10px;padding:10px 20px;min-height:48px}.button.primary{min-height:48px}.button.primary>svg:last-child{width:25px;height:25px;padding:6px}.button.favorite-button{width:49px;min-width:49px}.button.favorite-button>svg{background:none;color:inherit;width:20px;height:20px;padding:0}
+  .cathedral-hero{border-radius:0 0 23px 23px;min-height:710px;height:760px;max-height:none}.cathedral-hero-inner{padding-bottom:102px}.cathedral-copy>.eyebrow{font-size:6px;letter-spacing:1px;padding:8px 10px;gap:8px}.cathedral-copy>.eyebrow .gold-rule{width:15px}.cathedral-copy h1{font-size:clamp(47px,8.2vw,60px);letter-spacing:-2.3px;line-height:1.16;margin:26px 0}.cathedral-copy h1 em{border-radius:12px;padding:.02em .12em .07em;margin-top:6px;box-shadow:0 4px 0 #060a0873}.cathedral-copy>p{font-size:12px}.cathedral-actions{gap:9px;margin-top:29px}.cathedral-actions .button{font-size:10px;min-height:51px;padding:9px 11px 9px 21px;gap:24px}.cathedral-actions .button>svg:last-child{height:29px;width:29px;padding:7px}.hero-shelf-link{font-size:9px;padding:8px 5px;gap:10px}.hero-colophon p{font-size:14px;line-height:1.3}.hero-colophon>span{font-size:5.5px;letter-spacing:1.1px;gap:8px}.hero-colophon{gap:12px}.reading-seal{width:85px;bottom:116px;right:5px}.reading-seal>span{font-size:16px;letter-spacing:-.7px}.reading-seal>span>span{font-size:5.5px;margin-bottom:4px}.reading-seal>span>em{font-size:14px}.reading-seal>i{bottom:14px;font-size:7px}.inscription-strip{font-size:5.5px;letter-spacing:.55px;gap:12px;min-height:58px;margin-top:6px}
+  .curated-gallery,.gothic-journal-invite,.page-intro{border-radius:22px}.curated-copy h2{font-size:39px;letter-spacing:-1.5px;line-height:1.16}.curated-copy p{font-size:11px;line-height:1.95}.curated-intro>p{font-size:24px}.curated-book h3{font-size:16px;letter-spacing:-.5px}.section-heading h2{font-size:31px;letter-spacing:-1.2px;line-height:1.17}.section-heading .eyebrow{font-size:6.5px;letter-spacing:1.15px}.section-heading>.text-link{font-size:8px;max-width:94px;gap:6px;line-height:1.6}.section-heading>.text-link>svg{width:24px;height:24px;padding:6px}.home-book-grid .book-card h3{font-size:22px;line-height:1.25}.home-book-grid .book-genre{font-size:7px;letter-spacing:.8px}.home-book-grid .book-author{font-size:10px}.gothic-mood-card{border-radius:19px;min-height:265px;padding-inline:14px}.gothic-mood-card h3{font-size:21px}.gothic-journal-copy h2{font-size:37px;line-height:1.17;letter-spacing:-1.7px}.gothic-journal-copy p{font-size:11px}.gothic-journal-copy .button{font-size:9px;gap:15px;padding-inline:17px}.gothic-closing>p{font-size:21px;width:320px;margin-left:-50px;line-height:1.4}.gothic-closing>small{font-size:5.5px;letter-spacing:1.5px}
+  .page-intro h1{font-size:35px;line-height:1.18;letter-spacing:-1.4px}.page-intro{padding:27px 23px}.page-intro>p,.page-intro>div>p{font-size:11px}.page-intro>div>.eyebrow{font-size:6.5px}.catalog-search{padding:7px 7px 7px 14px;gap:8px}.catalog-search .button{padding:7px;gap:0;min-width:43px;font-size:0;border-radius:50%;min-height:43px}.catalog-search .button>svg:last-child{background:transparent;color:#17170f;width:22px;height:22px;padding:2px}.catalog-search>input{font-size:11px}.catalog-search input::placeholder{font-size:9px}.catalog-grid .book-card h3{font-size:22px}.catalog-toolbar select{font-size:9px}.catalog-grid .book-genre{font-size:7px}.catalog-end{font-size:13px}.modal{padding:22px 22px 25px;border-radius:22px}.modal-heading h2{font-size:25px;letter-spacing:-1px}.modal-book h3{font-size:21px}.form-actions .button{font-size:9px;padding-inline:14px}.field-note{font-size:10px}
+  .reading-desk{border-radius:20px}.reading-desk>.desk-scene{border-radius:18px 18px 0 0}.desk-controls{flex-wrap:wrap;padding:10px 12px;gap:8px}.desk-controls>span{max-width:none;font-size:7px;min-height:22px}.desk-controls>div{margin-left:auto;gap:8px}.desk-controls>div>button{font-size:8px;min-height:37px;padding:8px 12px}.desk-controls>div>button:last-child{min-width:37px;padding:10px}.detail-intro h1{font-size:40px;letter-spacing:-1.6px;line-height:1.16}.detail-author{font-size:20px}.detail-actions .button{font-size:10px;padding-inline:18px}.detail-intro .detail-description{font-size:12px}.about-book h2,.reviews-section h2{font-size:27px;line-height:1.2;letter-spacing:-1px}.about-book>p{font-size:12px}.review-empty h3{font-size:22px}.reviews-section .button{font-size:9px;max-width:none}.aside-note h3{font-size:20px;line-height:1.22}.related-grid .book-card h3{font-size:22px}.related-grid .book-author{font-size:10px}.journey-skip{padding:9px 13px;min-height:42px}.library-tabs{gap:7px}.library-tabs button{min-height:39px;padding:9px 11px;font-size:9px}.library-tabs button span{padding:1px 5px}.library-card h3,.bookshelf-view .library-card h3{font-size:22px;line-height:1.23}.empty-state h2{font-size:28px;line-height:1.25}.continue-card h3{font-size:22px}.journal-title{font-size:29px!important;letter-spacing:-1px}.journal-body{font-size:18px!important}.journal-preview h2{font-size:25px;line-height:1.25}.journal-paper{border-radius:18px}.journal-paper .editor-actions .button{font-size:9px;gap:8px;padding-inline:13px}.entry-book-label select{font-size:9px;border-radius:12px}.account-story h1{font-size:37px;line-height:1.2;letter-spacing:-1.7px}.account-form-panel>h2{font-size:30px;line-height:1.2}.settings-section h2{font-size:26px}.footer-top .brand{font-size:21px}.footer-top>p{font-size:14px}.footer-top>div{font-size:8px}.footer-flourish{font-size:11px}
+}
+@media(max-width:430px){.brand{font-size:20px}.brand-caption{font-size:4.7px;letter-spacing:1.2px}.header-inner{gap:7px;width:calc(100% - 26px)}.brand-icon{width:24px}.header-signin{padding:8px 10px;font-size:8px;gap:4px}.mobile-toggle{width:35px}.cathedral-copy h1{font-size:47px}.cathedral-copy h1 em{letter-spacing:-2px}.cathedral-copy>.eyebrow{font-size:5.5px;letter-spacing:.8px}.cathedral-copy>p{font-size:11px}.cathedral-hero{height:740px;min-height:710px}.reading-seal{right:5px;bottom:114px;width:79px}.reading-seal>span{font-size:15px}.reading-seal>span>em{font-size:13px}.reading-seal>i{bottom:12px}.home-book-grid .book-card h3,.catalog-grid .book-card h3,.related-grid .book-card h3{font-size:22px}.curated-book h3{font-size:20px;line-height:1.22}.gothic-journal-copy h2{font-size:34px}.gothic-closing>p{font-size:20px;width:285px;margin-left:-44px}.page-intro h1{font-size:34px}.library-card h3,.bookshelf-view .library-card h3{font-size:21px}.detail-intro h1{font-size:38px}.section-heading h2{font-size:30px}}
+.gothic-closing>p{width:min(480px,calc(100vw - 64px));margin-inline:0;justify-self:center}
+@media(prefers-reduced-motion:reduce){.button:hover,.button:active{transform:none}.reading-seal{transform:rotate(9deg)}.cathedral-copy h1 em{transform:rotate(-2deg)}}
