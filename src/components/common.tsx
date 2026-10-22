@@ -24,6 +24,14 @@ export function Empty({ icon = <Bookmark size={30} strokeWidth={1.2} />, title, 
 }
 export function Modal({ title, children, close }: { title: string; children: React.ReactNode; close: () => void }) {
   const ref = useRef<HTMLDialogElement>(null);
-  useEffect(() => { const el = ref.current!; el.showModal(); return () => { el.close(); }; }, []);
+  useEffect(() => {
+    const el = ref.current!;
+    const opener = document.activeElement;
+    el.showModal();
+    return () => {
+      el.close();
+      if (opener instanceof HTMLElement && opener.isConnected) opener.focus();
+    };
+  }, []);
   return <dialog className="modal" ref={ref} aria-labelledby="dialog-title" onCancel={e => { e.preventDefault(); close(); }} onClick={e => { if (e.target === ref.current) { const r = ref.current.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) close(); } }}><div className="modal-heading"><h2 id="dialog-title">{title}</h2><button type="button" className="icon-button" aria-label="Close dialog" onClick={close}><X size={20} /></button></div>{children}</dialog>;
 }

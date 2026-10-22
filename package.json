@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack --hostname 127.0.0.1",
+    "prebuild": "node scripts/check-assets.mjs",
     "build": "next build --webpack",
     "build:vercel": "node scripts/check-vercel-env.mjs && npm run build",
     "start": "next start --hostname 127.0.0.1",

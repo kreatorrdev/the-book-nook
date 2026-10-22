@@ -36,10 +36,19 @@ const password = randomBytes(24).toString("base64url");
 try {
   const home = await request("/");
   check(home.response.status === 200 && home.text.includes("gothic-cathedral-game.webp"), "public home serves the latest hero without Vercel authentication");
-  const image = await fetch(origin + "/images/gothic-cathedral-game.webp");
-  check(image.ok && image.headers.get("content-type")?.includes("image/webp") && (await image.arrayBuffer()).byteLength === 411822, "new hero image is publicly available");
-  const mobileImage = await fetch(origin + "/images/gothic-cathedral-game-mobile.webp");
-  check(mobileImage.ok && (await mobileImage.arrayBuffer()).byteLength === 129222, "mobile hero uses the smaller 129 KB image");
+  for (const [path, size, type] of [
+    ["/images/gothic-cathedral-game.webp", 411822, "image/webp"],
+    ["/images/gothic-cathedral-game-mobile.webp", 129222, "image/webp"],
+    ["/images/gothic-archive.webp", 451830, "image/webp"],
+    ["/images/gothic-cathedral.webp", 387046, "image/webp"],
+    ["/images/reading-desk.webp", 329164, "image/webp"],
+    ["/social-preview.jpg", 170713, "image/jpeg"],
+  ]) {
+    const image = await fetch(origin + path);
+    const bytes = Buffer.from(await image.arrayBuffer());
+    const signature = type === "image/webp" ? bytes.toString("ascii", 0, 4) === "RIFF" && bytes.toString("ascii", 8, 12) === "WEBP" : bytes.length > 2 && bytes.readUInt16BE(0) === 0xffd8;
+    check(image.ok && image.headers.get("content-type")?.includes(type) && bytes.length === size && signature, `${path} serves the expected public image`);
+  }
   const canonical = home.text.match(/<link rel="canonical" href="([^"]+)"/);
   check(canonical && new URL(canonical[1]).href === new URL(origin).href && home.text.includes('property="og:image"'), "home publishes canonical and social-sharing metadata");
   const robots = await request("/robots.txt");
