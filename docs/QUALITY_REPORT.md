@@ -10,14 +10,15 @@ Date: 2026-10-22. Scope: the deployed portfolio demo at https://the-book-nook-wi
 - Navigation can be dismissed with Escape and returns focus to its toggle. Mobile navigation exposes its controlled region and current destination. The skip link targets a focusable main landmark.
 - Public pages provide canonical URLs and Open Graph/Twitter previews. Authentication/private pages request no indexing. Robots rules and a sitemap identify the public editorial entry points.
 - The case study, portfolio copy, deployment record, documentation index, and verification instructions are maintained in English.
+- All original photographic assets are included in the private source repository. A build preflight validates their file signatures before Next.js builds; live checks verify each asset's media type, size, and image signature.
 
 ## Functional checks
 
 The production verification command is `npm run test:production`. It is a manual release check and is not part of the ordinary CI suite. It creates one uniquely named temporary reader, uses only that reader's private records, and removes the account afterward.
 
-All **16 live checks** passed: home, landscape hero, smaller mobile hero, canonical/social metadata, robots/sitemap, noindex on authentication pages, 40 books/five collections from hosted PostgreSQL, a book detail route, sign-up, sign-out, password sign-in, shelf persistence, journal persistence, session persistence, exclusion of private data from guest responses, and temporary-account cleanup.
+All **20 live checks** passed: home; all five WebP images and the JPEG social preview; canonical/social metadata; robots/sitemap; noindex on authentication pages; 40 books/five collections from hosted PostgreSQL; a book detail route; sign-up; sign-out; password sign-in; shelf persistence; journal persistence; session persistence; exclusion of private data from guest responses; and temporary-account cleanup.
 
-Four domain tests passed. The optimized Vercel build, including TypeScript checking, passed. A local standalone TypeScript 7 check exhausted the Windows host's available memory, so local success is not claimed for that attempt; the hosted build supplies the completed type/build verification. The existing CI workflow runs type checking, domain tests, isolated PostgreSQL integration checks, and a production build on Node.js 24.
+GitHub Actions passed type checking, four domain tests, 39 isolated PostgreSQL integration checks, and a production build on Node.js 24. The optimized Vercel build also passed. A local standalone TypeScript 7 check exhausted the Windows host's available memory, so local success is not claimed for that attempt; the hosted checks supply the completed type/build verification.
 
 ## Performance measurement limits
 
@@ -27,7 +28,9 @@ Google PageSpeed Insights API returned HTTP 429 because its shared daily quota w
 
 ## Browser review
 
-Final desktop, phone, keyboard navigation, skip-link, mobile-menu, book-animation, filter-dialog, and form checks are recorded with the release screenshots. This is a bounded portfolio review, not an independent screen-reader certification or a complete security audit.
+Chrome review verified the loaded desktop hero at 1440 × 900 and the 535-pixel-wide mobile crop at a 360 × 800 viewport. The home, catalog, and book page showed no horizontal overflow at the sampled 320/360-pixel widths. Escape dismissed mobile navigation and returned focus to its toggle; the skip link focused the main landmark. Searching for Walden returned one result with the query in the URL. The filter dialog opened with focus on Close and dismissed with Escape. The book animation reached the open title page on the loaded antique desk, removed its dialog, and released scroll locking. Sign-in fields exposed Email address and Password labels.
+
+Current evidence is saved in `screenshots/final-home-desktop.png`, `final-home-mobile.png`, `final-discover-mobile.png`, and `final-book-mobile.png`. Older screenshots retain previous design and interaction iterations. This is a bounded portfolio review, not an independent screen-reader certification or a complete security audit.
 
 ## Optional work outside this demo
 

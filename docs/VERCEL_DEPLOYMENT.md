@@ -2,7 +2,7 @@
 
 Updated 2026-10-22. The portfolio demo is live at **https://the-book-nook-wine.vercel.app**. Vercel reported the production deployment as `READY`; independent requests confirmed that the public production domain works without a Vercel session.
 
-Deployment ID: `dpl_7C7n9LwxgAmZucAbyNAGKrdfoYSD`. Inspection URL: https://vercel.com/kreatorrdev/the-book-nook/7C7n9LwxgAmZucAbyNAGKrdfoYSD
+Application release source: `a0348a87bd6afeee9561e1fccb3cfb919e18b3ba`. The private GitHub repository is connected to Vercel; changes on `main` publish automatically. Use the production alias above for the current demo and the project dashboard for immutable deployment records.
 
 Project dashboard: https://vercel.com/kreatorrdev/the-book-nook
 
@@ -10,7 +10,7 @@ The remote project was verified with the Next.js preset, Node.js 24.x, `npm ci`,
 
 The owner explicitly approved the new Neon resource and confirmed accepting its marketplace terms. `book-nook-db` is ready on the `free_v3` (Free) plan in Frankfurt (`fra1`), connected only to this project's production environment. Resource ID: `store_AiiidyHGn8RqEtqb`. Neon built-in authentication is disabled because the application uses Better Auth. `vercel env run -e production -- npm run db:migrate` successfully initialized the schema and curated catalog against the hosted PostgreSQL database. Credentials were passed in process memory. Local reader accounts, shelves, and journals were not transferred.
 
-The project is a full Next.js app. Keep the Next.js framework preset, project root at this directory, and Node.js 24.x. The tracked `vercel.json` installs from the lockfile and runs `npm run build:vercel`. It checks the required environment settings before building. `.vercelignore` excludes local credentials, local reader data, build caches, and screenshots from CLI uploads.
+The project is a full Next.js app. Keep the Next.js framework preset, project root at this directory, and Node.js 24.x. The tracked `vercel.json` installs from the lockfile, places server functions in Frankfurt (`fra1`) beside the database, and runs `npm run build:vercel`. It checks required environment settings and the six required photographic assets before building. `.vercelignore` excludes local credentials, local reader data, build caches, and screenshots from CLI uploads.
 
 ## Required setup
 
@@ -37,9 +37,11 @@ Hosted incoming requests do not apply migrations. The local embedded PGlite data
 
 ## Production verification
 
-Ten live checks passed: public home with the latest hero, the exact optimized hero asset, all 40 books and five collections from hosted PostgreSQL, a public book page, sign-up with a secure session, private shelf persistence, private journal persistence, session/record persistence across independent requests, exclusion of private records from guest responses, and removal of the temporary verification account with its private records. No test review or public activity was created. The original local reader database was not changed.
+Twenty live checks passed: public home; all five WebP images and the JPEG social preview with their expected type, size, and image signature; canonical/social metadata; robots/sitemap; authentication-page noindex; all 40 books and five collections from hosted PostgreSQL; a public book page; sign-up, sign-out, password sign-in; private shelf and journal persistence; session/record persistence across independent requests; guest exclusion of private records; and cleanup of the temporary verification account and its private records. No test review or public activity was created. The original local reader database was not changed. Run the manual check with `npm run test:production`.
 
-Browser review confirmed the live hero, no horizontal overflow at desktop width, and the Walden link's animated handoff to an open cover on its reading desk, with scroll locking released and an empty browser error log. The deployed home screenshot is saved as `docs/screenshots/vercel-home-desktop.png`. The public production domain is accessible without Vercel sign-in; Vercel authentication protection remains on protected deployment URLs.
+Chrome review confirmed the loaded hero at desktop/phone sizes, no horizontal overflow at the sampled 320/360/1440-pixel widths, mobile-menu Escape/focus behavior, the skip link, Walden search, a keyboard-dismissable filter dialog, labeled sign-in fields, and the animated handoff to an open cover on the loaded reading desk with scroll locking released. Current evidence uses the `docs/screenshots/final-` prefix. The public production domain is accessible without Vercel sign-in; Vercel authentication protection remains on protected deployment URLs.
+
+GitHub Actions passed type checking, four domain tests, 39 isolated integration checks, and a production build on Node.js 24: [validated application workflow](https://github.com/kreatorrdev/the-book-nook/actions/runs/39817284680). The [quality report](QUALITY_REPORT.md) records measurement limits and optional broader service work.
 
 ## References
 

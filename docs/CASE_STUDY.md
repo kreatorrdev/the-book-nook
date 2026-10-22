@@ -18,9 +18,9 @@ Library and journal screenshots use a disposable **Interface Check** account wit
 
 | Experience | Desktop | Mobile |
 | --- | --- | --- |
-| Reading Room | [Published home](screenshots/vercel-home-desktop.png) | [Gothic home](screenshots/game-hero-mobile.png) |
-| Discover | [Catalog baseline](screenshots/discover-desktop.jpg) | [Rounded mobile filters](screenshots/rounded-discover-mobile.jpg) |
-| Book details | [Book interaction](screenshots/book-motion-v2-final.jpg) | [Mobile desk](screenshots/book-motion-v2-mobile.jpg) |
+| Reading Room | [Published home](screenshots/final-home-desktop.png) | [Published mobile home](screenshots/final-home-mobile.png) |
+| Discover | [Catalog baseline](screenshots/discover-desktop.jpg) | [Published mobile search](screenshots/final-discover-mobile.png) |
+| Book details | [Book interaction](screenshots/book-motion-v2-final.jpg) | [Published mobile desk](screenshots/final-book-mobile.png) |
 
 The screenshot directory also retains the earlier cream interface and successive Gothic/motion iterations as design history; those files are not the current visual specification.
 
@@ -45,6 +45,7 @@ The schema enforces one shelf entry and one review per reader/work, edition/work
 ## Validation evidence
 
 - TypeScript checking and the optimized production build pass.
+- GitHub Actions runs the complete type/domain/integration/build workflow successfully. Twenty hosted smoke checks verify public images, metadata, authentication, private persistence, and guest isolation.
 - Four domain tests exercise progress bounds, unknown page totals, percentage calculation, and safe internal return destinations.
 - Thirty-nine integration checks exercise actual authentication and PostgreSQL route handlers. They cover two-reader isolation, unauthorized writes, CSRF, edition limits/resets, pause behavior, journal conflicts, review consent/gating, reporting, hide/restore, catalog editing/withdrawal, retained writing, session revocation, account deletion, and persistence after closing/reopening the on-disk database.
 - Browser checks cover title/author search, mobile filter Apply behavior, sorting, preserved query state after book navigation and sign-in, responsive library controls, keyboard activation of the progress dialog, a saved 35% → 42% progress change, bookshelf selection, journal draft recovery, explicit saving, and reopening the saved entry.

@@ -76,7 +76,7 @@ Run `npm run db:migrate` against the target database as a release step, then `np
 
 Never use the embedded filesystem database on serverless hosting. A single-process local production preview can explicitly opt in with `ALLOW_LOCAL_DATABASE=1`; a production-mode authentication secret is still required.
 
-The portfolio demo was deployed to Vercel with a Neon Free database on 2026-10-22. The schema/catalog migration and ten live checks passed, including sign-up, private shelf/journal persistence, and guest privacy. Mail delivery, monitoring, backups, and trusted proxy/rate-limiter review remain operational work for a broader production launch. Email verification and email-based password recovery are not exposed until a mail provider is configured; authenticated password changes work.
+The portfolio demo was deployed to Vercel with a Neon Free database on 2026-10-22. The schema/catalog migration and 20 live checks passed, including all photographic assets, sign-in/sign-up, private shelf/journal persistence, and guest privacy. Mail delivery, monitoring, backups, and trusted proxy/rate-limiter review remain operational work for a broader production launch. Email verification and email-based password recovery are not exposed until a mail provider is configured; authenticated password changes work.
 
 ## Verification
 
@@ -91,7 +91,7 @@ For an explicitly requested live release check, `npm run test:production` exerci
 
 Unit tests cover progress limits, unknown editions, percentage conversion, and safe return URLs. Integration checks create an isolated PostgreSQL database and three temporary accounts, then exercise actual authentication and route handlers: ownership, CSRF, edition changes, pauses, journal conflicts, review consent, publication gating, reporting, moderation, catalog changes, retention, sign-out, and account deletion. Test data is removed after the database closes. Tests do not touch the development reader database.
 
-The supplied GitHub Actions workflow is configured for the same checks on Node.js 24; it has not been run remotely. The build uses one worker to accommodate computers with limited available memory.
+GitHub Actions passed type checking, four domain tests, 39 isolated integration checks, and a production build on Node.js 24. Every build first validates the six required photographic assets, so an incomplete source transfer fails before publication. The build uses one worker to accommodate computers with limited available memory.
 
 ## Project guide
 
@@ -108,4 +108,4 @@ The supplied GitHub Actions workflow is configured for the same checks on Node.j
 
 Catalog genres, mood tags, and collection membership use text/JSONB within the catalog tables. Reader ownership, editions, shelves, journals, reviews, reports, and moderation history use relational tables and constraints. Separate author/tag join tables from the candidate roadmap are a future catalog-normalization task. No external book API is required.
 
-Clubs, challenges, reading timers, social profiles, dark mode, and page-turn animations remain outside launch scope, as specified in the roadmap. A complete WCAG audit, production performance/security review, and hosted launch are tracked in [delivery status](docs/IMPLEMENTATION_STATUS.md). See the [case study and screenshots](docs/CASE_STUDY.md) for the implemented experience and validation evidence.
+Clubs, challenges, reading timers, social profiles, reader-selectable themes, and page-turn animations remain outside launch scope. The Gothic portfolio demo and hosted launch are delivered; broader service work is tracked in [delivery status](docs/IMPLEMENTATION_STATUS.md). See the [case study and screenshots](docs/CASE_STUDY.md) for the implemented experience and validation evidence.
