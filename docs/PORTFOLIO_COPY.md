@@ -1,5 +1,8 @@
 # Portfolio presentation
 
+> Source documentation review — 1 November 2026: the source repository is public. Earlier dated references to private source access describe the previous repository setting. Hosted access, private user data and historical verification retain their documented scope.
+
+
 ## Short description
 
 The Book Nook is a Gothic reading sanctuary that combines a cinematic library environment with useful, private reading tools. Readers can explore a curated catalog, organize their shelves, track progress against the right edition, and keep a personal journal. Selecting a cover brings the book onto an antique desk and opens it through a continuous animation.
@@ -14,7 +17,7 @@ A literary web app with cathedral-inspired imagery, a cinematic book-to-desk int
 
 **Live demo:** https://the-book-nook-wine.vercel.app
 
-**Source:** private repository, https://github.com/kreatorrdev/the-book-nook. Access can be shared separately when desired.
+**Source:** public repository, https://github.com/kreatorrdev/the-book-nook.
 
 ## Longer case-study introduction
 

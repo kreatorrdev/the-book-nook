@@ -1,10 +1,13 @@
 # The Book Nook
 
+> Source documentation review — 1 November 2026: the source repository is public. Earlier dated references to private source access describe the previous repository setting. Hosted access, private user data and historical verification retain their documented scope.
+
+
 A Gothic reading sanctuary built from [roadmap v0.2](docs/04_THE_BOOK_NOOK_BOOKS_ROADMAP.md), with the user's subsequent [cathedral/library art direction](docs/GOTHIC_ART_DIRECTION.md). The interface and project documentation are in English.
 
 Live portfolio demo: **https://the-book-nook-wine.vercel.app**. Hosted on Vercel with Neon PostgreSQL. Deployment and live verification details are in [Vercel deployment](docs/VERCEL_DEPLOYMENT.md).
 
-Private source: **https://github.com/kreatorrdev/the-book-nook**. Start with the [English documentation index](docs/README.md), [case study](docs/CASE_STUDY.md), [portfolio copy](docs/PORTFOLIO_COPY.md), and [final quality report](docs/QUALITY_REPORT.md).
+Public source: **https://github.com/kreatorrdev/the-book-nook**. Start with the [English documentation index](docs/README.md), [case study](docs/CASE_STUDY.md), [portfolio copy](docs/PORTFOLIO_COPY.md), and [final quality report](docs/QUALITY_REPORT.md).
 
 ## Run locally
 
@@ -109,3 +112,7 @@ GitHub Actions passed type checking, four domain tests, 39 isolated integration 
 Catalog genres, mood tags, and collection membership use text/JSONB within the catalog tables. Reader ownership, editions, shelves, journals, reviews, reports, and moderation history use relational tables and constraints. Separate author/tag join tables from the candidate roadmap are a future catalog-normalization task. No external book API is required.
 
 Clubs, challenges, reading timers, social profiles, reader-selectable themes, and page-turn animations remain outside launch scope. The Gothic portfolio demo and hosted launch are delivered; broader service work is tracked in [delivery status](docs/IMPLEMENTATION_STATUS.md). See the [case study and screenshots](docs/CASE_STUDY.md) for the implemented experience and validation evidence.
+
+## Maintaining this project
+
+See the [contribution guide](CONTRIBUTING.md) for setup, relevant checks, documentation and configuration rules.

@@ -1,5 +1,8 @@
 # Documentation
 
+> Source documentation review — 1 November 2026: the source repository is public. Earlier dated references to private source access describe the previous repository setting. Hosted access, private user data and historical verification retain their documented scope.
+
+
 The Book Nook is a deployed portfolio demo. All maintained project documentation is in English.
 
 - [Project README](../README.md): setup, features, commands, and live demo.
@@ -13,4 +16,8 @@ The Book Nook is a deployed portfolio demo. All maintained project documentation
 - [Content provenance](CONTENT_INVENTORY.md): catalog facts, original text/covers, fonts, icons, and generated images.
 - [Roadmap v0.2](04_THE_BOOK_NOOK_BOOKS_ROADMAP.md), [roadmap review](ROADMAP_REVIEW.md), and [original design baseline](THE_BOOK_NOOK_DESIGN_SPEC.md): planning history. Where these differ from the delivered demo, the current status and Gothic art direction take precedence.
 
-The private repository contains source, original assets, screenshots, and these documents. Local credentials, the local reader database, runtime caches, and tool-specific state are excluded.
+The public repository contains source, original assets, screenshots, and these documents. Local credentials, the local reader database, runtime caches, and tool-specific state are excluded.
+
+## Contributions
+
+See the [contribution guide](../CONTRIBUTING.md) for the development and review workflow.

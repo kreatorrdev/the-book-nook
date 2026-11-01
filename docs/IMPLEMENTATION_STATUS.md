@@ -1,5 +1,8 @@
 # Implementation and launch status
 
+> Source documentation review — 1 November 2026: the source repository is public. Earlier dated references to private source access describe the previous repository setting. Hosted access, private user data and historical verification retain their documented scope.
+
+
 Updated 2026-10-22. The portfolio demo is deployed at **https://the-book-nook-wine.vercel.app**, with Vercel and Neon PostgreSQL. This document records delivered behavior separately from the planning roadmap. The user's Gothic revision supersedes the initial cream design; see [current art direction and verification](GOTHIC_ART_DIRECTION.md).
 
 | Phase | Current result |
@@ -12,7 +15,7 @@ Updated 2026-10-22. The portfolio demo is deployed at **https://the-book-nook-wi
 | B5 — Content/moderation | Admin metadata/tags/collection editing, reversible catalog withdrawal, reports, hide/restore audit, and server role enforcement. Publishing requires a provisioned administrator. |
 | B6 — Signature | Book-to-desk navigation with selected cover, perspective placement and shadow, opening cover, skip/Escape/replay, native dialog containment, and reduced motion. Equivalent grid/bookshelf actions and persisted view preference remain. |
 | B7 — QA/launch | GitHub Actions passed type checking, four domain tests, 39 isolated integration checks, and a production build. Vercel is READY; 20 live public/image/authentication/private persistence checks passed. Final Chrome desktop/mobile review and release screenshots are included. Independent accessibility/security/performance audits remain outside the demo scope. |
-| B8 — Case study | Source, original assets, current and historical screenshots, architecture, decisions, provenance, quality report, portfolio descriptions, and walkthrough outline are delivered in the private GitHub repository with English documentation. |
+| B8 — Case study | Source, original assets, current and historical screenshots, architecture, decisions, provenance, quality report, portfolio descriptions, and walkthrough outline are delivered in the public GitHub repository with English documentation. |
 | B9 — Expansion | Deferred: clubs, challenges, sessions, advanced statistics, social profiles, reader-selectable themes, and full ebook/page-turn reading. The requested Gothic theme and opening-cover animation are delivered. |
 
 ## Remaining broader launch work

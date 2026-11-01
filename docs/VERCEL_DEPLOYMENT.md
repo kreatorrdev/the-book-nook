@@ -1,8 +1,11 @@
 # Vercel deployment
 
+> Source documentation review — 1 November 2026: the source repository is public. Earlier dated references to private source access describe the previous repository setting. Hosted access, private user data and historical verification retain their documented scope.
+
+
 Updated 2026-10-22. The portfolio demo is live at **https://the-book-nook-wine.vercel.app**. Vercel reported the production deployment as `READY`; independent requests confirmed that the public production domain works without a Vercel session.
 
-Application release source: `a0348a87bd6afeee9561e1fccb3cfb919e18b3ba`. The private GitHub repository is connected to Vercel; changes on `main` publish automatically. Use the production alias above for the current demo and the project dashboard for immutable deployment records.
+Application release source: `a0348a87bd6afeee9561e1fccb3cfb919e18b3ba`. The public GitHub repository is connected to Vercel; changes on `main` publish automatically. Use the production alias above for the current demo and the project dashboard for immutable deployment records.
 
 Project dashboard: https://vercel.com/kreatorrdev/the-book-nook
 

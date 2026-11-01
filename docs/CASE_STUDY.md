@@ -1,6 +1,9 @@
 # The Book Nook — A Gothic reading sanctuary
 
-**Live portfolio demo:** [the-book-nook-wine.vercel.app](https://the-book-nook-wine.vercel.app). Updated 2026-10-22. Source and English documentation: [private GitHub repository](https://github.com/kreatorrdev/the-book-nook).
+> Source documentation review — 1 November 2026: the source repository is public. Earlier dated references to private source access describe the previous repository setting. Hosted access, private user data and historical verification retain their documented scope.
+
+
+**Live portfolio demo:** [the-book-nook-wine.vercel.app](https://the-book-nook-wine.vercel.app). Updated 2026-10-22. Source and English documentation: [public GitHub repository](https://github.com/kreatorrdev/the-book-nook).
 
 Scope: product rules, Gothic visual direction, responsive interface, book interaction, authentication, PostgreSQL persistence, deployment, and documentation. The owner's references and feedback guided the work, with AI-assisted implementation and original generated architectural assets.
 
